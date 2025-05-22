@@ -1,4 +1,12 @@
+:warning: THIS REPOSITORY IS A FORK!<br>
+The fork has been created, to make some changes to the Geochemical Analytical Methods Vocabulary in order to import it into the TIB Terminology Service.<br>
+These changes include:
+* deactivate the import of dcterms: because this results in a missing import error on OLS4
+* making skos:narrower relations explicit so that a term hierarchy view can be generated on TIB Terminology Service
 
+Issues concerning this fork and the changes made here can be adressed on the [issue tracker]().
+
+Issues concerning the contents and any of the other resources on this fork, should be reported to the [original repository]().
 
 # What is here:
 This repository is a workspace for developing and maintaining vocabularies to support interoperable sample-based analytical data from astromaterials. 
