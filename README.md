@@ -1,5 +1,5 @@
 :warning: THIS REPOSITORY IS A FORK!<br>
-The fork has been created, to make some changes to the Geochemical Analytical Methods Vocabulary in order to import it into the TIB Terminology Service.<br>
+The fork has been created, to make some changes to the [Geochemical Analytical Methods Vocabulary](https://github.com/amds-ldeo/Vocabulary/blob/master/geochemistry/GeochemAnalyticalMethod.ttl) in order to import it into the [TIB Terminology Service]().<br>
 These changes include:
 * deactivate the import of dcterms: because this results in a missing import error on OLS4
 * making skos:narrower relations explicit so that a term hierarchy view can be generated on TIB Terminology Service
