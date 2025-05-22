@@ -1916,7 +1916,7 @@ meth:method
   dcterm:modified "2023-05-26"^^xsd:date ;
   dcterm:publisher "Astromaterials Data System (Astromat)" ;
   rdfs:label "Analytical methods for geochemistry and cosmochemistry"@en ;
-  owl:imports dcterm: ;
+  # owl:imports dcterm: ; # import prevents ingesting the vocab to ols
   owl:imports <http://www.w3.org/2000/01/rdf-schema> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   skos:definition "This concept scheme contains skos concepts for analysis methods used to produce observation results with information about the physical properties, chemical or isotopic composition, crystallography, or molecular structure of material samples. Based on spreadsheet compilation of method vocabularies from Geo.X, GEOROC, PetDB and OSIRIS-REx. Definitions added and updated based on web research, and SKOS serialization by S.M. Richard. Note that although there are high-level method categories for 'Physical property measurements' and the 'Bioanalytical method', these are placeholders and only include a few examples that are relevant to analytical methods in geo- or cosmochemistry."@en ;
@@ -3574,3 +3574,1282 @@ meth:xrayspectrometry
   skos:notation "X-S" ;
   skos:prefLabel "X-ray spectrometry"@en ;
 .
+
+
+# added for TIB Terminology Service > narrower relations need to be explicit to create a hierarchy view on OLS4-based service
+
+# added narrower statement
+# created with
+# PREFIX owl: <http://www.w3.org/2002/07/owl#>
+# PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# CONSTRUCT {?s skos:narrower ?y}
+# WHERE {?y skos:broader ?s.
+# }
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/acceleratormassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/acceleratormassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/acidreactioncarbonateanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/acidreactioncarbonateanalysis> rdf:type owl:NamedIndividual ;
+                                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/carbonatebombanalysis> ,
+                                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/charmographanalysis> ,
+                                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/dietrichfruhlingcalcimetry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/adsorptionanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/adsorptionanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/afmtopographyimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/afmtopographyimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/alphaparticlecounting
+<https://w3id.org/geochem/1.0/analyticalmethod/alphaparticlecounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/alphaparticlespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/alphaparticlespectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/alpharecoiltrackcounting
+<https://w3id.org/geochem/1.0/analyticalmethod/alpharecoiltrackcounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/amperometry
+<https://w3id.org/geochem/1.0/analyticalmethod/amperometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/analyticalmethod
+<https://w3id.org/geochem/1.0/analyticalmethod/analyticalmethod> rdf:type owl:NamedIndividual ;
+                                                                 <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/benchchemistry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/bioanalyticalmethod> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/chromatographyanalysis> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/electrochemicaltechniques> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/electrondiffraction> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysis> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/geochronology> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/imagingtechniques> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/magneticfieldmeasurement> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/microscopy> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/other> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/particlebeamexcitation> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/particlecounting> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/particleinducedactivationanalysis> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/photometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/physicalpropertymeasurement> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/spectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/surfaceanalysis> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/thermoluminescenceanalysis> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/trackcounting> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/xraydiffraction> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/angleofreposemeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/angleofreposemeasurement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/anionchromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/anionchromatographyanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/atomicabsorptionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/atomicabsorptionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/electrothermalabsorptionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/atomicforcemicroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/atomicforcemicroscopy> rdf:type owl:NamedIndividual ;
+                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/afmtopographyimaging> ,
+                                                                                                                     <https://w3id.org/geochem/1.0/analyticalmethod/particlecohesiondetermination> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/atomprobetomography
+<https://w3id.org/geochem/1.0/analyticalmethod/atomprobetomography> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/augerelectronspectroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/augerelectronspectroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/backscatteredelectrongrainboundarymap
+<https://w3id.org/geochem/1.0/analyticalmethod/backscatteredelectrongrainboundarymap> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/backscatteredelectronimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/backscatteredelectronimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/benchchemistry
+<https://w3id.org/geochem/1.0/analyticalmethod/benchchemistry> rdf:type owl:NamedIndividual ;
+                                                               <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/combustionanalysis> ,
+                                                                                                              <https://w3id.org/geochem/1.0/analyticalmethod/lossonignitionanalysis> ,
+                                                                                                              <https://w3id.org/geochem/1.0/analyticalmethod/penfieldmethodanalysis> ,
+                                                                                                              <https://w3id.org/geochem/1.0/analyticalmethod/wetchemistry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/betacounting
+<https://w3id.org/geochem/1.0/analyticalmethod/betacounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/bioanalyticalmethod
+<https://w3id.org/geochem/1.0/analyticalmethod/bioanalyticalmethod> rdf:type owl:NamedIndividual ;
+                                                                    <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/dnasequencing> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/flowcytometry> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/fluorescentinsituhybridization> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/hybridizationassay> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/nextgenerationsequencing> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/quantitativepolymerasechainreaction> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/sangersequencing> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/shotgunmethod> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/broadbeamxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/broadbeamxrayspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/capacitancedilatometry
+<https://w3id.org/geochem/1.0/analyticalmethod/capacitancedilatometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/carbonatebombanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/carbonatebombanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/catalyticcombustionanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/catalyticcombustionanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/cathodoluminescenceimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/cathodoluminescenceimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/cationchromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/cationchromatographyanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/cavityenhancedabsorptionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/cavityenhancedabsorptionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/cavityringdownspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/cavityringdownspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/cavityringdownspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/charmographanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/charmographanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/chromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/chromatographyanalysis> rdf:type owl:NamedIndividual ;
+                                                                       <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographyanalysis> ,
+                                                                                                                      <https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographyanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/colormetricanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/colormetricanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/combustionanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/combustionanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatography
+<https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatography> rdf:type owl:NamedIndividual ;
+                                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatographyisotopicratiomassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatographyisotopicratiomassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatographyisotopicratiomassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/combustioninfraredspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/combustioninfraredspectrometry> rdf:type owl:NamedIndividual ;
+                                                                               <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/catalyticcombustionanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/combustionionchromatography
+<https://w3id.org/geochem/1.0/analyticalmethod/combustionionchromatography> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/compressiontest
+<https://w3id.org/geochem/1.0/analyticalmethod/compressiontest> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/confocalxrayfluorescencespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/confocalxrayfluorescencespectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/continuousflowisotoperatiomassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/continuousflowisotoperatiomassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/coulometricalanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/coulometricalanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/desorptionelectrosprayionizationorbitrapmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/desorptionelectrosprayionizationorbitrapmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/deuteronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/deuteronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/dietrichfruhlingcalcimetry
+<https://w3id.org/geochem/1.0/analyticalmethod/dietrichfruhlingcalcimetry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/differentialscanningcalorimetry
+<https://w3id.org/geochem/1.0/analyticalmethod/differentialscanningcalorimetry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/differentialthermalanalyis
+<https://w3id.org/geochem/1.0/analyticalmethod/differentialthermalanalyis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/directcurrentplasmaemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/directcurrentplasmaemissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/directcurrentplasmaspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/directcurrentplasmaspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/directshearstrengthmeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/directshearstrengthmeasurement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/dnasequencing
+<https://w3id.org/geochem/1.0/analyticalmethod/dnasequencing> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/dualinletisotoperatiomassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/dualinletisotoperatiomassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electricalconductivitymeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/electricalconductivitymeasurement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electrochemicalimpedancespectroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/electrochemicalimpedancespectroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electrochemicaltechniques
+<https://w3id.org/geochem/1.0/analyticalmethod/electrochemicaltechniques> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/amperometry> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/coulometricalanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/electricalconductivitymeasurement> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/electrochemicalimpedancespectroscopy> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/potentiometry> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/redoxpotentialmeasurement> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/voltammetry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electronbackscatterdiffraction
+<https://w3id.org/geochem/1.0/analyticalmethod/electronbackscatterdiffraction> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electrondiffraction
+<https://w3id.org/geochem/1.0/analyticalmethod/electrondiffraction> rdf:type owl:NamedIndividual ;
+                                                                    <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/electronbackscatterdiffraction> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/transmittedelectrondiffraction> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electronenergylossspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/electronenergylossspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electroninducedxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/electroninducedxrayspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/energydispersiveelectroninducedxrayspectrometry> ,
+                                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/quantitativeanalysiselectroninducedxrayspectrometry> ,
+                                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/wavelengthdispersiveelectroninducedxrayspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electronmicroscopyimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/electronmicroscopyimaging> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/backscatteredelectrongrainboundarymap> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/backscatteredelectronimaging> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/secondaryelectronimaging> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/transmissionelectronimaging> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electronspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/electronspectrometry> rdf:type owl:NamedIndividual ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/augerelectronspectroscopy> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/electronenergylossspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/xrayphotoelectronspectrometery> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electronspinresonanceageanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/electronspinresonanceageanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/electrothermalabsorptionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/electrothermalabsorptionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysis> rdf:type owl:NamedIndividual ;
+                                                                  <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisinfraredspectrometry> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysismassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisinfraredspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisinfraredspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisisotoperatiomassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisisotoperatiomassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysismassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysismassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/continuousflowisotoperatiomassspectrometry> ,
+                                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisisotoperatiomassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/emissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/emissionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/fireassayemissionspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/flameemissionspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/laserinducedbreakdownspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/opticalemissionspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/plasmaemissionspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/ultravioletemissionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/energydispersiveelectroninducedxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/energydispersiveelectroninducedxrayspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayfluorescencespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayfluorescencespectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayspectraraster
+<https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayspectraraster> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/energydispersiveelectroninducedxrayspectrometry> ,
+                                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayfluorescencespectrometry> ,
+                                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/totalreflectionxrayfluorescencespectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/energyfilteredtransmissionelectronimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/energyfilteredtransmissionelectronimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/epithermalneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/epithermalneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/extendedxrayabsorptionfinestructure
+<https://w3id.org/geochem/1.0/analyticalmethod/extendedxrayabsorptionfinestructure> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fastneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/fastneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fireassayemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/fireassayemissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fissiontrackcounting
+<https://w3id.org/geochem/1.0/analyticalmethod/fissiontrackcounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/flameemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/flameemissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/flowcytometry
+<https://w3id.org/geochem/1.0/analyticalmethod/flowcytometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fluorescencemicroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/fluorescencemicroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fluorescencespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/fluorescencespectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fluorescentinsituhybridization
+<https://w3id.org/geochem/1.0/analyticalmethod/fluorescentinsituhybridization> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/focusedionbeamscanningmicroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/focusedionbeamscanningmicroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fouriertransforminfraredspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/fouriertransforminfraredspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/fouriertransformioncyclotronresonancemassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/fouriertransformioncyclotronresonancemassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gammacounting
+<https://w3id.org/geochem/1.0/analyticalmethod/gammacounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gammarayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/gammarayspectrometry> rdf:type owl:NamedIndividual ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/mossbauerspectroscopy> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/nuclearreactionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographyanalysis> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatography> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographyflameionizationdetection> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographymassspectrometry> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographythermalconductivitydetection> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatography> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographyflameionizationdetection
+<https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographyflameionizationdetection> rdf:type owl:NamedIndividual ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographyflameionizationdetection> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographymassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographymassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatographyisotopicratiomassspectrometry> ,
+                                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographymassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographythermalconductivitydetection
+<https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographythermalconductivitydetection> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gaspycnometry
+<https://w3id.org/geochem/1.0/analyticalmethod/gaspycnometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/geochronology
+<https://w3id.org/geochem/1.0/analyticalmethod/geochronology> rdf:type owl:NamedIndividual ;
+                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/alpharecoiltrackcounting> ,
+                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/electronspinresonanceageanalysis> ,
+                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/fissiontrackcounting> ,
+                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/geochronology40ar39ar> ,
+                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/thermoluminescencedating> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/geochronology40ar39ar
+<https://w3id.org/geochem/1.0/analyticalmethod/geochronology40ar39ar> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/glowdischargemassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/glowdischargemassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gradientionchromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/gradientionchromatographyanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gravimeticanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/gravimeticanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/gutzeittest
+<https://w3id.org/geochem/1.0/analyticalmethod/gutzeittest> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/highresolutioninductivelycoupledplasmamassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/highresolutioninductivelycoupledplasmamassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/hybridizationassay
+<https://w3id.org/geochem/1.0/analyticalmethod/hybridizationassay> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/imagingtechniques
+<https://w3id.org/geochem/1.0/analyticalmethod/imagingtechniques> rdf:type owl:NamedIndividual ;
+                                                                  <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/afmtopographyimaging> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/atomprobetomography> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/cathodoluminescenceimaging> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/electronmicroscopyimaging> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/focusedionbeamscanningmicroscopy> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/quantitativereflectanceimagingsystem> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/structuredlightscanning> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/visiblenearinfraredandmidinfraredimaging> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/xrayimaging> ,
+                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/xrayphotoelectronspectroscopycompositionmap> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/inductionheatinganalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/inductionheatinganalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmaemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmaemissionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmaopticalemissionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmamassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmamassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                         <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/highresolutioninductivelycoupledplasmamassspectrometry> ,
+                                                                                                                                        <https://w3id.org/geochem/1.0/analyticalmethod/laserablationinductivelycoupledplasmamassspectrometry> ,
+                                                                                                                                        <https://w3id.org/geochem/1.0/analyticalmethod/liquidinletinductivelycoupledplasmamassspectrometry> ,
+                                                                                                                                        <https://w3id.org/geochem/1.0/analyticalmethod/multicollectorinductivelycoupledplasmamassspectrometry> ,
+                                                                                                                                        <https://w3id.org/geochem/1.0/analyticalmethod/quadrupoleinductivelycoupledplasmmassspectrometry> ,
+                                                                                                                                        <https://w3id.org/geochem/1.0/analyticalmethod/sectorfieldicpms> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmaopticalemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmaopticalemissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/infraredabsorptionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/infraredabsorptionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/infraredopticalspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/infraredopticalspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/infraredphotometry
+<https://w3id.org/geochem/1.0/analyticalmethod/infraredphotometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/infraredreflectance
+<https://w3id.org/geochem/1.0/analyticalmethod/infraredreflectance> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/infraredspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/infraredspectrometry> rdf:type owl:NamedIndividual ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/combustioninfraredspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/fouriertransforminfraredspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/infraredabsorptionspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/infraredopticalspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/infraredtransmissionspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/lecofurnaceanalysis> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/nanoscaleinfraredspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/infraredtransmissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/infraredtransmissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/instrumentalneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/instrumentalneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/ionchromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/ionchromatographyanalysis> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/anionchromatographyanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/cationchromatographyanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/combustionionchromatography> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/gradientionchromatographyanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/ionsensitiveelectrodeanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/ionsensitiveelectrodeanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/isotoperatiomassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/isotoperatiomassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/combustiongaschromatographyisotopicratiomassspectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/continuousflowisotoperatiomassspectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/dualinletisotoperatiomassspectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysisisotoperatiomassspectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/laserfluorinationanalysis> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/steppedheatingcarbonandnitrogenisotopicanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserablationinductivelycoupledplasmamassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/laserablationinductivelycoupledplasmamassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/microprobetwosteplasermassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserablationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/laserablationmassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/laserablationinductivelycoupledplasmamassspectrometry> ,
+                                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/laserablationresonanceionizationmassspectrometry> ,
+                                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/lassmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserablationresonanceionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/laserablationresonanceionizationmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserabsorptionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/laserabsorptionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/cavityenhancedabsorptionspectrometry> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/wavelengthmodulationspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserfluorinationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/laserfluorinationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserinducedbreakdownspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/laserinducedbreakdownspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/laserionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/laserionizationmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/lassmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/lassmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/lecofurnaceanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/lecofurnaceanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographyanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographyanalysis> rdf:type owl:NamedIndividual ;
+                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/ionchromatographyanalysis> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographymassspectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographyorganiccarbondetection> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographymassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographymassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographyorganiccarbondetection
+<https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographyorganiccarbondetection> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/liquidinletinductivelycoupledplasmamassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/liquidinletinductivelycoupledplasmamassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/lockinthermography
+<https://w3id.org/geochem/1.0/analyticalmethod/lockinthermography> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/lossonignitionanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/lossonignitionanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/magneticfieldmeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/magneticfieldmeasurement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/manometry
+<https://w3id.org/geochem/1.0/analyticalmethod/manometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/massspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/massspectrometry> rdf:type owl:NamedIndividual ;
+                                                                 <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/acceleratormassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/elementalanalysismassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/fouriertransformioncyclotronresonancemassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/gaschromatographymassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/glowdischargemassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/isotoperatiomassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/laserablationmassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/liquidchromatographymassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/micromassmultiprepmassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/noblegasmassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/orbitrapmassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/plasmasourcemassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationmassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/secondaryionizationmassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/solidsourcemassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/sparksourcemassspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/thermalionizationmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/micromassmultiprepmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/micromassmultiprepmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/microprobetwosteplasermassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/microprobetwosteplasermassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/microscopicxrayimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/microscopicxrayimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/microscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/microscopy> rdf:type owl:NamedIndividual ;
+                                                           <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/fluorescencemicroscopy> ,
+                                                                                                          <https://w3id.org/geochem/1.0/analyticalmethod/visiblelightmicroscopy> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/microxrayfluorescencespectroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/microxrayfluorescencespectroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/minicryogenfreemeasurementsystemforthermalconductivity
+<https://w3id.org/geochem/1.0/analyticalmethod/minicryogenfreemeasurementsystemforthermalconductivity> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/moistureanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/moistureanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/mossbauerspectroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/mossbauerspectroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/multicollectorinductivelycoupledplasmamassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/multicollectorinductivelycoupledplasmamassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nanoindentationandmicroindentation
+<https://w3id.org/geochem/1.0/analyticalmethod/nanoindentationandmicroindentation> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nanoscaleinfraredspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/nanoscaleinfraredspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/negativeionthermalionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/negativeionthermalionizationmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/neutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/neutronactivationanalysis> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/epithermalneutronactivationanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/fastneutronactivationanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/instrumentalneutronactivationanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/pigsneutronactivationanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/promptgammaneutronactivationanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/radiochemicalneutronactivationanalysis> ,
+                                                                                                                         <https://w3id.org/geochem/1.0/analyticalmethod/thermalneutronactivationanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/neutroncounting
+<https://w3id.org/geochem/1.0/analyticalmethod/neutroncounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/neutronirradiationnoblegasmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/neutronirradiationnoblegasmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nextgenerationsequencing
+<https://w3id.org/geochem/1.0/analyticalmethod/nextgenerationsequencing> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/noblegasmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/noblegasmassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                         <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/neutronirradiationnoblegasmassspectrometry> ,
+                                                                                                                        <https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationtimeofflightnoblegasmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nuclearmagneticresonancespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/nuclearmagneticresonancespectrometry> rdf:type owl:NamedIndividual ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/solidstatenuclearmagneticresonancespectroscopy> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nuclearmicroprobeanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/nuclearmicroprobeanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nuclearparticletrackcounting
+<https://w3id.org/geochem/1.0/analyticalmethod/nuclearparticletrackcounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/nuclearreactionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/nuclearreactionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/opticalemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/opticalemissionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalemissionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/opticalspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/opticalspectrometry> rdf:type owl:NamedIndividual ;
+                                                                    <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/atomicabsorptionspectrometry> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/emissionspectrometry> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/laserabsorptionspectrometry> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalspectrometry> ,
+                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/spectrophotometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/orbitrapmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/orbitrapmassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                         <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/desorptionelectrosprayionizationorbitrapmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/other
+<https://w3id.org/geochem/1.0/analyticalmethod/other> rdf:type owl:NamedIndividual ;
+                                                      <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/moistureanalysis> ,
+                                                                                                     <https://w3id.org/geochem/1.0/analyticalmethod/particlesizedistributionanalysis> ,
+                                                                                                     <https://w3id.org/geochem/1.0/analyticalmethod/pointcounting> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particlebeamexcitation
+<https://w3id.org/geochem/1.0/analyticalmethod/particlebeamexcitation> rdf:type owl:NamedIndividual ;
+                                                                       <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/electronenergylossspectrometry> ,
+                                                                                                                      <https://w3id.org/geochem/1.0/analyticalmethod/electronmicroscopyimaging> ,
+                                                                                                                      <https://w3id.org/geochem/1.0/analyticalmethod/focusedionbeamscanningmicroscopy> ,
+                                                                                                                      <https://w3id.org/geochem/1.0/analyticalmethod/nuclearmicroprobeanalysis> ,
+                                                                                                                      <https://w3id.org/geochem/1.0/analyticalmethod/particleinducedxrayspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particlecohesiondetermination
+<https://w3id.org/geochem/1.0/analyticalmethod/particlecohesiondetermination> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particlecounting
+<https://w3id.org/geochem/1.0/analyticalmethod/particlecounting> rdf:type owl:NamedIndividual ;
+                                                                 <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/alphaparticlecounting> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/betacounting> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/gammacounting> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/neutroncounting> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particleinducedactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/particleinducedactivationanalysis> rdf:type owl:NamedIndividual ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/deuteronactivationanalysis> ,
+                                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/neutronactivationanalysis> ,
+                                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/photonactivationanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particleinducedxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/particleinducedxrayspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/quantitativeanalysisparticleinducedxrayspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particlesizedistributionanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/particlesizedistributionanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/particlespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/particlespectrometry> rdf:type owl:NamedIndividual ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/alphaparticlespectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/electronspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/massspectrometry> ,
+                                                                                                                    <https://w3id.org/geochem/1.0/analyticalmethod/nuclearreactionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/penfieldmethodanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/penfieldmethodanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/phmeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/phmeasurement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/photometry
+<https://w3id.org/geochem/1.0/analyticalmethod/photometry> rdf:type owl:NamedIndividual ;
+                                                           <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/infraredphotometry> ,
+                                                                                                          <https://w3id.org/geochem/1.0/analyticalmethod/infraredreflectance> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/photonactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/photonactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/photonspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/photonspectrometry> rdf:type owl:NamedIndividual ;
+                                                                   <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/fluorescencespectrometry> ,
+                                                                                                                  <https://w3id.org/geochem/1.0/analyticalmethod/gammarayspectrometry> ,
+                                                                                                                  <https://w3id.org/geochem/1.0/analyticalmethod/infraredspectrometry> ,
+                                                                                                                  <https://w3id.org/geochem/1.0/analyticalmethod/opticalspectrometry> ,
+                                                                                                                  <https://w3id.org/geochem/1.0/analyticalmethod/transmissionspectrometry> ,
+                                                                                                                  <https://w3id.org/geochem/1.0/analyticalmethod/xrayspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/physicalpropertymeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/physicalpropertymeasurement> rdf:type owl:NamedIndividual ;
+                                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/adsorptionanalysis> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/angleofreposemeasurement> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/atomicforcemicroscopy> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/capacitancedilatometry> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/compressiontest> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/directshearstrengthmeasurement> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/gaspycnometry> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/manometry> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/nanoindentationandmicroindentation> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/porosimetry> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/seismicvelocitiesandrockultrasonicelasticconstants> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/tensiometry> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/thermalanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/pigsneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/pigsneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/plasmaemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/plasmaemissionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                           <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/directcurrentplasmaemissionspectrometry> ,
+                                                                                                                          <https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmaemissionspectrometry> ,
+                                                                                                                          <https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalemissionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalemissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/plasmaopticalspectrometry> rdf:type owl:NamedIndividual ;
+                                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/directcurrentplasmaspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/plasmasourcemassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/plasmasourcemassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/inductivelycoupledplasmamassspectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/laserionizationmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/pointcounting
+<https://w3id.org/geochem/1.0/analyticalmethod/pointcounting> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/polarography
+<https://w3id.org/geochem/1.0/analyticalmethod/polarography> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/porosimetry
+<https://w3id.org/geochem/1.0/analyticalmethod/porosimetry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/positiveionthermalionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/positiveionthermalionizationmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/potentiometry
+<https://w3id.org/geochem/1.0/analyticalmethod/potentiometry> rdf:type owl:NamedIndividual ;
+                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/ionsensitiveelectrodeanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/promptgammaneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/promptgammaneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatography
+<https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatography> rdf:type owl:NamedIndividual ;
+                                                                           <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographyflameionizationdetection> ,
+                                                                                                                          <https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographymassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographyflameionizationdetection
+<https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographyflameionizationdetection> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographymassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/pyrolysisgaschromatographymassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/quadrupoleinductivelycoupledplasmmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/quadrupoleinductivelycoupledplasmmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/quantitativeanalysiselectroninducedxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/quantitativeanalysiselectroninducedxrayspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/quantitativeanalysisparticleinducedxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/quantitativeanalysisparticleinducedxrayspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/quantitativepolymerasechainreaction
+<https://w3id.org/geochem/1.0/analyticalmethod/quantitativepolymerasechainreaction> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/quantitativereflectanceimagingsystem
+<https://w3id.org/geochem/1.0/analyticalmethod/quantitativereflectanceimagingsystem> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/radiochemicalneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/radiochemicalneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/ramanspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/ramanspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/redoxpotentialmeasurement
+<https://w3id.org/geochem/1.0/analyticalmethod/redoxpotentialmeasurement> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationmassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/laserablationresonanceionizationmassspectrometry> ,
+                                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationtimeofflightnoblegasmassspectrometry> ,
+                                                                                                                                   <https://w3id.org/geochem/1.0/analyticalmethod/secondaryneutralmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationtimeofflightnoblegasmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/resonanceionizationtimeofflightnoblegasmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/sangersequencing
+<https://w3id.org/geochem/1.0/analyticalmethod/sangersequencing> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/scanningtransmissionelectronimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/scanningtransmissionelectronimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/secondaryelectronimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/secondaryelectronimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/secondaryionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/secondaryionizationmassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/shrimp> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/secondaryneutralmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/secondaryneutralmassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/sectorfieldicpms
+<https://w3id.org/geochem/1.0/analyticalmethod/sectorfieldicpms> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/seismicvelocitiesandrockultrasonicelasticconstants
+<https://w3id.org/geochem/1.0/analyticalmethod/seismicvelocitiesandrockultrasonicelasticconstants> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/shotgunmethod
+<https://w3id.org/geochem/1.0/analyticalmethod/shotgunmethod> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/shrimp
+<https://w3id.org/geochem/1.0/analyticalmethod/shrimp> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/singlecrystalxraydiffraction
+<https://w3id.org/geochem/1.0/analyticalmethod/singlecrystalxraydiffraction> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/solidsourcemassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/solidsourcemassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/solidstatenuclearmagneticresonancespectroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/solidstatenuclearmagneticresonancespectroscopy> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/sparksourcemassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/sparksourcemassspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/spectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/spectrometry> rdf:type owl:NamedIndividual ;
+                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/nuclearmagneticresonancespectrometry> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/particlespectrometry> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/photonspectrometry> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/ramanspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/spectrophotometry
+<https://w3id.org/geochem/1.0/analyticalmethod/spectrophotometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/sphericalcellbulkthermalconductivityanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/sphericalcellbulkthermalconductivityanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/steppedheatingcarbonandnitrogenisotopicanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/steppedheatingcarbonandnitrogenisotopicanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/structuredlightscanning
+<https://w3id.org/geochem/1.0/analyticalmethod/structuredlightscanning> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/surfaceanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/surfaceanalysis> rdf:type owl:NamedIndividual ;
+                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/afmtopographyimaging> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/temperatureprogrammeddesorptionelectronprobeanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/synchrotonxrayfluorescencespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/synchrotonxrayfluorescencespectrometry> rdf:type owl:NamedIndividual ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/microxrayfluorescencespectroscopy> ,
+                                                                                                                                      <https://w3id.org/geochem/1.0/analyticalmethod/synchrotronxrayfluorescencetomography> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/synchrotronxrayfluorescencetomography
+<https://w3id.org/geochem/1.0/analyticalmethod/synchrotronxrayfluorescencetomography> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/temperatureprogrammeddesorptionelectronprobeanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/temperatureprogrammeddesorptionelectronprobeanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/tensiometry
+<https://w3id.org/geochem/1.0/analyticalmethod/tensiometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/thermalanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/thermalanalysis> rdf:type owl:NamedIndividual ;
+                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/differentialscanningcalorimetry> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/differentialthermalanalyis> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/inductionheatinganalysis> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/lockinthermography> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/minicryogenfreemeasurementsystemforthermalconductivity> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/sphericalcellbulkthermalconductivityanalysis> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/thermogravimetryanalysis> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/thermalionizationmassspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/thermalionizationmassspectrometry> rdf:type owl:NamedIndividual ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/negativeionthermalionizationmassspectrometry> ,
+                                                                                                                                 <https://w3id.org/geochem/1.0/analyticalmethod/positiveionthermalionizationmassspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/thermalneutronactivationanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/thermalneutronactivationanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/thermogravimetryanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/thermogravimetryanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/thermoluminescenceanalysis
+<https://w3id.org/geochem/1.0/analyticalmethod/thermoluminescenceanalysis> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/thermoluminescencedating
+<https://w3id.org/geochem/1.0/analyticalmethod/thermoluminescencedating> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/titration
+<https://w3id.org/geochem/1.0/analyticalmethod/titration> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/totalreflectionxrayfluorescencespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/totalreflectionxrayfluorescencespectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/trackcounting
+<https://w3id.org/geochem/1.0/analyticalmethod/trackcounting> rdf:type owl:NamedIndividual ;
+                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/alpharecoiltrackcounting> ,
+                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/fissiontrackcounting> ,
+                                                                                                             <https://w3id.org/geochem/1.0/analyticalmethod/nuclearparticletrackcounting> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/transmissionelectronimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/transmissionelectronimaging> rdf:type owl:NamedIndividual ;
+                                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/energyfilteredtransmissionelectronimaging> ,
+                                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/scanningtransmissionelectronimaging> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/transmissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/transmissionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                         <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/infraredtransmissionspectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/transmittedelectrondiffraction
+<https://w3id.org/geochem/1.0/analyticalmethod/transmittedelectrondiffraction> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/ultravioletemissionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/ultravioletemissionspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/visiblelightmicroscopy
+<https://w3id.org/geochem/1.0/analyticalmethod/visiblelightmicroscopy> rdf:type owl:NamedIndividual ;
+                                                                       <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/pointcounting> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/visiblenearinfraredandmidinfraredimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/visiblenearinfraredandmidinfraredimaging> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/voltammetry
+<https://w3id.org/geochem/1.0/analyticalmethod/voltammetry> rdf:type owl:NamedIndividual ;
+                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/polarography> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/wavelengthdispersiveelectroninducedxrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/wavelengthdispersiveelectroninducedxrayspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/wavelengthmodulationspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/wavelengthmodulationspectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/wetchemistry
+<https://w3id.org/geochem/1.0/analyticalmethod/wetchemistry> rdf:type owl:NamedIndividual ;
+                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/acidreactioncarbonateanalysis> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/colormetricanalysis> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/fireassayemissionspectrometry> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/gravimeticanalysis> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/gutzeittest> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/laserfluorinationanalysis> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/phmeasurement> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/radiochemicalneutronactivationanalysis> ,
+                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/titration> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayabsorptionnearedgestructurespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayabsorptionnearedgestructurespectrometry> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayabsorptionspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayabsorptionspectrometry> rdf:type owl:NamedIndividual ;
+                                                                           <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/extendedxrayabsorptionfinestructure> ,
+                                                                                                                          <https://w3id.org/geochem/1.0/analyticalmethod/xrayabsorptionnearedgestructurespectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xraycomputedtomography
+<https://w3id.org/geochem/1.0/analyticalmethod/xraycomputedtomography> rdf:type owl:NamedIndividual ;
+                                                                       <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/synchrotronxrayfluorescencetomography> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xraydiffraction
+<https://w3id.org/geochem/1.0/analyticalmethod/xraydiffraction> rdf:type owl:NamedIndividual ;
+                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/singlecrystalxraydiffraction> ,
+                                                                                                               <https://w3id.org/geochem/1.0/analyticalmethod/xraypowderdiffraction> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayfluorescencespectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayfluorescencespectrometry> rdf:type owl:NamedIndividual ;
+                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/confocalxrayfluorescencespectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayfluorescencespectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/synchrotonxrayfluorescencespectrometry> ,
+                                                                                                                            <https://w3id.org/geochem/1.0/analyticalmethod/totalreflectionxrayfluorescencespectrometry> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayimaging
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayimaging> rdf:type owl:NamedIndividual ;
+                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/microscopicxrayimaging> ,
+                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/xraycomputedtomography> ,
+                                                                                                           <https://w3id.org/geochem/1.0/analyticalmethod/xraymap> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xraymap
+<https://w3id.org/geochem/1.0/analyticalmethod/xraymap> rdf:type owl:NamedIndividual ;
+                                                        <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayspectraraster> .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayphotoelectronspectrometery
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayphotoelectronspectrometery> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayphotoelectronspectroscopycompositionmap
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayphotoelectronspectroscopycompositionmap> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xraypowderdiffraction
+<https://w3id.org/geochem/1.0/analyticalmethod/xraypowderdiffraction> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/geochem/1.0/analyticalmethod/xrayspectrometry
+<https://w3id.org/geochem/1.0/analyticalmethod/xrayspectrometry> rdf:type owl:NamedIndividual ;
+                                                                 <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/geochem/1.0/analyticalmethod/broadbeamxrayspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/electroninducedxrayspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/energydispersivexrayspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/particleinducedxrayspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/xrayabsorptionspectrometry> ,
+                                                                                                                <https://w3id.org/geochem/1.0/analyticalmethod/xrayfluorescencespectrometry> .
+
