@@ -1,12 +1,14 @@
 :warning: THIS REPOSITORY IS A FORK!<br>
-The fork has been created, to make some changes to the [Geochemical Analytical Methods Vocabulary](https://github.com/amds-ldeo/Vocabulary/blob/master/geochemistry/GeochemAnalyticalMethod.ttl) in order to import it into the [TIB Terminology Service]().<br>
+The fork has been created, to make some changes to the [Geochemical Analytical Methods Vocabulary](https://github.com/amds-ldeo/Vocabulary/blob/master/geochemistry/GeochemAnalyticalMethod.ttl) in order to import it into the [TIB Terminology Service](https://terminology.tib.eu/ts).<br>
 These changes include:
 * deactivate the import of dcterms: because this results in a missing import error on OLS4
 * making skos:narrower relations explicit so that a term hierarchy view can be generated on TIB Terminology Service
 
-Issues concerning this fork and the changes made here can be adressed on the [issue tracker]().
+Issues concerning this fork and the changes made here can be adressed [here](https://github.com/SArndt-TIB/Vocabulary/issues).
 
-Issues concerning the contents and any of the other resources on this fork, should be reported to the [original repository]().
+Issues concerning the contents and any of the other resources on this fork that were not changed, should be reported to the [original repository](https://github.com/amds-ldeo/Vocabulary/issues).
+
+⬇️ From here on down, you find the content of the original repo's README.md: 
 
 # What is here:
 This repository is a workspace for developing and maintaining vocabularies to support interoperable sample-based analytical data from astromaterials. 
